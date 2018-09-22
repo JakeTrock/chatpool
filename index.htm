@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<style>
+h1,h2,h3,p{font-family:"Tahoma"}a{font-size:20px;font-family:"tahoma";color:#000;padding:none;text-decoration:none}a.hover{color:blue}a{color:black}h3{font-size:15px;padding:none;width:150px}.volume{left:15%;width:100px;bottom:2px;height:10px}.p2pFailed{background:red;width:55px}.p2pDisconnected{background:orange;width:55px}.p2pCompleted,.p2pConnected{background:green;width:55px}table,th,tr{border:3px solid black}button{border:none;background:none}#lgsm{height:10%;width:10%}#mc-canvas{width:220px;height:154px;background:#fff -9999px -9999px no-repeat;background-image:url('motionCaptcha-shapes.jpg') !important}#mc-canvas.triangle{background-position:10px 10px}#mc-canvas.x{background-position:-200px 10px}#mc-canvas.rectangle{background-position:-400px 10px}#mc-canvas.circle{background-position:-600px 10px}#mc-canvas.check{background-position:10px -150px}#mc-canvas.caret{background-position:-200px -150px}#mc-canvas.zigzag{background-position:-400px -150px}#mc-canvas.arrow{background-position:-600px -150px}#mc-canvas.leftbracket{background-position:10px -300px}#mc-canvas.rightbracket{background-position:-200px -300px}#mc-canvas.v{background-position:-400px -300px}#mc-canvas.delete{background-position:-600px -300px}#mc-canvas.leftbrace{background-position:10px-450px}#mc-canvas.rightbrace{background-position:-200px -450px}#mc-canvas.star{background-position:-400px -450px}#mc-canvas.pigtail{background-position:-600px -450px}.mc-noselect{-webkit-user-select:none,-moz-user-select:none,user-select:none}
+</style>
+<center><h1 id="bdrp"></h1></center>
+<a onclick="rmc('ind');"><img src="dux.png" id="lgsm"></a>
+<a onclick="rmc('sci');">  Science  </a>
+<a onclick="rmc('tec');">  Technology  </a>
+<a onclick="rmc('biz');">  Business  </a>
+<a onclick="rmc('pol');">  Politics  </a>
+<a onclick="rmc('mus');">  Music  </a>
+<a onclick="rmc('tv');">  Tv  </a>
+<a onclick="rmc('com');">  Comedy  </a>
+<a onclick="rmc('drw');">  Drawing(idle board)  </a>
+<a onclick="rmc('vdg');">  Video Games(idle board)  </a>
+<a onclick="rmc('cod');">  Coding(idle board)  </a>
+<a onclick="rmc('qna');">  QnA  </a>
+<a onclick="rmc('his');">  History  </a>
+<a onclick="rmc('hob');">  Hobbies  </a>
+<a onclick="rmc('rnd');">  Random  </a>
+<a onclick="rmc('bob');">  Battle Of the Boards  </a>
+<hr>
+<div id="indiv">
+<table>
+<tr>
+<th><button onclick="mute()"><img width="50%" height="50%" src="speaker.png" id="urimg"></button><meter width="10" id="localVolume" class="volume" min="-45" max="-20" high="-25" low="-40" value="-45"></meter></th>
+</tr>
+</table>
+<div id="remotes"></div>
+<div id="remotesVideos"></div>
+<video height="300" id="localVideo"></video>
+</div>
+<div id="cdiv">
+<h1>Chatpool Voice Chat.</h1>
+<img src="dux2.png">
+<h2>100% anonymous.</h2>
+<h2>100% free.</h2>
+<p>Choose a board you love.</p>
+<h2>&nbsp</h2>
+<a onclick="tsh()">Read the aup(It's short, I promise)</a><br/>
+<textarea id="tos" style="display:none" cols="100" rows="14" readonly>
+	Chatpool TOS
+	1.)no screeching/yelling on chat. 
+	2.)please don&rsquo;t do illegal stuff, I can&rsquo;t afford a lawyer and don&rsquo;t want to live in a cardboard box. 
+	3.)please do not &ldquo;hack&rdquo; my servers. I swear there&rsquo;s nothing interesting there.
+	4.)no playing music on the chat. Except if somebody asks you to, or you are on the dedicated server. 
+	5.)everything on chatpool should be taken as satire.
+	6.)no self-marketing on chatpool please.
+	7.)please no lude/disturbing noises on chat. 
+	8.)What happens on chatpool, stays on chatpool, please don&rsquo;t use footage or recordings on any platform excluding those dedicated to video or audio. 
+	9.)Do not go into servers with the intent of eithe pissing off the occupants having a peaceful conversation, or to for lack of a better term, &ldquo;troll&rdquo; them 
+	10.)do not track a person on a server with ddos, swat, or any other malicious intent in mind.
+	 Finally, to re-iterate, I AM NOT RESPNSIBLE FOR ANYTHING THAT HAPPENS ON CHATPOOL I MADE THIS FOR FUN AND ANYTHING YOU DO WAS NEVER ANTICIPATED BY ME. Thank you for reading.
+	 p.s.Why isn't my site fully open source? security. Until I can get a stable cash flow to increase the power of my signaling servers, I cannot release the source of my project, due to the fact that one could repurpose the code to create a custom server that would use much more bandwidth than I have access to.
+	 -Jake
+</textarea>
+<p style="color:blue">Idle boards are boards you keep open while doing a task to keep you company</p>
+</div>
+<div style="position: fixed;bottom: 0;right: 0; border:3px solid black;">
+<form action="#" id="capform">
+<div id="mc">
+<p>Please draw the shape in the box when timer is up:(<a onclick="window.location.reload()" href="#" title="Click for a new shape">new shape</a>)</p>
+<p id="indi"></p>
+<canvas id="mc-canvas"></canvas></div>
+<input type="button" disabled="disabled" id="xt" value="Submit Form" onclick="timerenew()" />
+<input type="submit" disabled="disabled" value=""/>
+<input type="hidden" id="mc-action" value="" />
+</form>
+</div>
+<script src="swrtc.js"></script>
+<script src="jquery.js"></script>
+<script src="motionCaptcha.js"></script>
+<script src="vx2.js"></script>
+</head>
+</body>
+</html>
